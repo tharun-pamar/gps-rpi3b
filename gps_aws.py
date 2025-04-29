@@ -7,10 +7,10 @@ gpsd.connect()
 
 # MQTT client setup
 client = AWSIoTMQTTClient("EpicsOBUClient")
-client.configureEndpoint("<YOUR_ENDPOINT>", 8883)
-client.configureCredentials("certs/AmazonRootCA1.pem", 
-                            "certs/private.pem.key", 
-                            "certs/certificate.pem.crt")
+client.configureEndpoint("a359o8qgb081eq-ats.iot.eu-north-1.amazonaws.com", 8883)
+client.configureCredentials("/home/pi/certs/AmazonRootCA1.pem", 
+                            "/home/pi/certs/private.pem.key", 
+                            "/home/pi/certs/certificate.pem.crt")
 
 client.configureOfflinePublishQueueing(-1)
 client.configureDrainingFrequency(2)
